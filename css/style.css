@@ -106,17 +106,19 @@ form {
 }
 
 .email input {
-  margin: 0 1.2em 0 1.8em;
+  margin: 0 0 0 1.8em;
   height: 100%;
   font-size: 0.8em;
   border: none;
   background: none;
   outline: none;
+
+  width: 60%;
 }
 
 .image-error {
   display: none;
-  margin-left: 0.3em;
+  margin-left: 0.4em;
   width: 18px;
 }
 
@@ -221,7 +223,12 @@ body {
     content: url("../images/hero-desktop.jpg");
   }
 
+  .email input {
+    margin: 0 0 0 1.8em;
+  }
+
   .image-error {
+    margin-left: 0.5em;
     width: 24px;
   }
 }

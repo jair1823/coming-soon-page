@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,300i,400,400i,600,600i&display=swap");
+
+:root {
+  --primary-color-desa-red: hsl(0, 36%, 70%);
+  --primary-color-soft-red: hsl(0, 93%, 68%);
+  --neutral-color-dark-grayred: hsl(0, 6%, 24%);
+
+  --gradients-linear-1: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  --gradients-linear-2: linear-gradient(
+    135deg,
+    hsl(0, 80%, 86%),
+    hsl(0, 74%, 74%)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+}
+
+.header {
+  padding: 1.8em;
+  margin: 0 auto;
+}
+
+.header img {
+  width: 120px;
+}
+
+.hero-image {
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+  object-fit: cover;
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+.hero-content {
+  background: var(--gradients-linear-1);
+  padding: 2em;
+  text-align: center;
+}
+
+h1 {
+  max-width: 420px;
+  margin: 0 auto;
+  letter-spacing: 0.2em;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--neutral-color-dark-grayred);
+}
+
+h1 span {
+  display: block;
+  color: var(--primary-color-desa-red);
+  font-weight: 300;
+}
+
+p {
+  max-width: 420px;
+  margin: 0 auto;
+  color: var(--primary-color-desa-red);
+  font-size: 0.9em;
+  line-height: 1.5em;
+}
+
+form {
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: initial;
+  margin-bottom: 2em;
+}
+
+.email {
+  display: flex;
+  height: 2.6em;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 30px;
+  border: 1px solid var(--primary-color-desa-red);
+}
+
+.email input {
+  margin: 0 1.2em 0 1.8em;
+  height: 100%;
+  font-size: 0.8em;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.image-error {
+  display: none;
+  margin-left: 0.3em;
+  width: 18px;
+}
+
+.email button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: inherit;
+  border-radius: inherit;
+  border: none;
+  position: absolute;
+  right: 0;
+  background: var(--gradients-linear-2);
+}
+
+.error-msg {
+  display: none;
+  margin-left: 2em;
+  margin-top: 5px;
+  font-size: 0.66em;
+  color: var(--primary-color-soft-red);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2.5rem;
+  background: hsl(0, 100%, 94%);
+  position: sticky;
+  top: 0;
+  font-size: 0.8em;
+  text-align: center;
+}

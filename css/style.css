@@ -20,14 +20,22 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {
+html {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
 }
 
+body {
+  /* background-image: url("../images/bg-pattern-desktop.svg");  
+  background-repeat: no-repeat;
+  background-size: cover; */
+}
+
 .header {
+  grid-area: header;
   padding: 1.8em;
   margin: 0 auto;
 }
@@ -37,7 +45,8 @@ body {
 }
 
 .hero-image {
-  max-width: 420px;
+  grid-area: image;
+  max-width: 720px;
   margin: 0 auto;
   text-align: center;
   object-fit: cover;
@@ -48,7 +57,8 @@ body {
 }
 
 .hero-content {
-  background: var(--gradients-linear-1);
+  grid-area: hero;
+  background-image: var(--gradients-linear-1);
   padding: 2em;
   text-align: center;
 }
@@ -69,12 +79,13 @@ h1 span {
   font-weight: 300;
 }
 
-p {
+.hero-content p {
   max-width: 420px;
   margin: 0 auto;
   color: var(--primary-color-desa-red);
   font-size: 0.9em;
   line-height: 1.5em;
+  margin-bottom: 1em;
 }
 
 form {
@@ -141,4 +152,76 @@ footer {
   top: 0;
   font-size: 0.8em;
   text-align: center;
+}
+
+body {
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.show {
+  display: initial;
+}
+
+@media screen and (min-width: 1200px) {
+  footer {
+    display: none;
+  }
+
+  html {
+    font-size: 20px;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 3em;
+    margin: 0;
+    text-align: left;
+  }
+
+  .header img {
+    width: 158px;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-areas:
+      "header image"
+      "hero image";
+    grid-template-columns: 1fr 610px;
+    grid-template-rows: 120px 1fr;
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .hero-content {
+    margin-top: 2em;
+    background: none;
+    text-align: left;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    font-size: 3.5em;
+  }
+  .hero-content p {
+    font-size: 0.8em;
+  }
+
+  .email button {
+    width: 90px;
+  }
+
+  .hero-image {
+    height: 100vh;
+    width: 610px;
+    content: url("../images/hero-desktop.jpg");
+  }
+
+  .image-error {
+    width: 24px;
+  }
 }

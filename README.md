@@ -7,7 +7,7 @@ This project is mobile first.
 
 * Html5
 * CSS3
-
+* Javascript
 
 ## Design
 

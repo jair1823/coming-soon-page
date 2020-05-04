@@ -12,7 +12,6 @@ window.onload = function () {
 
 function updateValue(e) {
   email = e.target.value;
-  console.log(email);
 }
 
 function validateEmail() {
